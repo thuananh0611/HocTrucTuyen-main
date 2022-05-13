@@ -44,6 +44,7 @@ Route::get('/LOGIN/teacher', function () {
 
 Route::post('/LOGIN/teacher/store', [LoginController::class, "teacherstore"]);
 
+
 Route::get('/LOGIN/student', function () {
     return view('auth.student.index');
 });

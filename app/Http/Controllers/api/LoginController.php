@@ -15,10 +15,17 @@ class LoginController extends Controller
 
     public function teacherstore(request $request)
     {
+        //dd($request->all());
+        $role = isset($request->input['role']);
         $this->validate($request, [
             'email' => 'required|email:filter', 
             'password' => 'required'
         ]);
-
+        if(Auth::attempt(['email' => $request->input('email'), 
+        'password' => $request->input('password'),
+        $role ='Q005'
+        ])){
+            return route('')
+        }
     }
 }
