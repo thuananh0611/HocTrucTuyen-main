@@ -13,9 +13,8 @@
 
 <body>
     <div id="particles-js">
-        @include('auth.alerts')
         <form method="post" action="/LOGIN/teacher/store">
-
+            @include('auth.alerts')
             <div class="form-box">
                 <div class="header-text">
                     Đăng nhập
@@ -25,7 +24,7 @@
                     <input name="password" type="password" id="password" placeholder="Nhập mật khẩu..." required>
                     <span class="show-btn"><i class="fas fa-eye"></i></span>
                 </div>
-                <select class="form-control selectric" id="role" name="role" required>
+                <select id="role" name="role" required>
                     <option value="">--Chọn chức vụ--</option>
                     <option value="Q005">Tổ trưởng bộ môn</option>
                     <option value="2">Giáo viên chủ nhiệm</option>

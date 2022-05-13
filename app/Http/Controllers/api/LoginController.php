@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -20,7 +21,8 @@ class LoginController extends Controller
         $role = isset($request->input['role']);
         $this->validate($request, [
             'email' => 'required|email:filter',
-            'password' => 'required'
+            'password' => 'required',
+            'role' => 'required'
         ]);
         if (Auth::attempt([
             'email' => $request->input('email'),
@@ -29,6 +31,7 @@ class LoginController extends Controller
         ])) {
             return redirect()->route('teacher');
         }
+        Session::flash('error', 'Email hoặc Password không đúng!');
         return redirect()->back();
     }
 }
