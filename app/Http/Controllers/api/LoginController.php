@@ -12,7 +12,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('teacher.index');
+        return view('auth.index');
     }
 
     public function teacherstore(request $request)
