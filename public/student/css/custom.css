@@ -1,0 +1,102 @@
+#ks.table thead tr {
+    background: #338aa5;
+
+}
+
+#ks.table thead tr th {
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.4rem;
+}
+
+#ks.table tbody tr td {
+    padding: 0.4rem;
+}
+
+.td-3 {
+    text-align: center;
+    vertical-align: middle;
+    min-width: 10%;
+    width: 10%;
+}
+
+.ahv:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.boxx {
+    height: 200px;
+}
+
+.bhv {
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.8em 1.6em;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.bhv:focus,
+.bhv:active {
+    outline: none;
+}
+
+.bhv:before,
+.bhv:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    z-index: -1;
+    border-radius: inherit;
+    background: inherit;
+}
+
+.bhv:before {
+    background: linear-gradient(90deg, #0ebeff, #ffdd40, #ae63e4, #47cf73, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+    background-size: 200% 200%;
+}
+
+.bhv:after {
+    margin: 3px;
+}
+
+.bhv:hover:before,
+.bhv:focus:before {
+    animation: rainbow-border 1.5s linear infinite
+}
+
+
+@keyframes rainbow-border {
+    0% {
+        background-position: 0% 50%
+    }
+
+    100% {
+        background-position: 200% 50%
+    }
+}
+
+input[type="text"],
+input[type="password"] {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.sort.table thead tr th:hover {
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+}
