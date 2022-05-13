@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('teacher.index');
     }
 
@@ -18,14 +19,16 @@ class LoginController extends Controller
         //dd($request->all());
         $role = isset($request->input['role']);
         $this->validate($request, [
-            'email' => 'required|email:filter', 
+            'email' => 'required|email:filter',
             'password' => 'required'
         ]);
-        if(Auth::attempt(['email' => $request->input('email'), 
-        'password' => $request->input('password'),
-        $role ='Q005'
-        ])){
-            return route('')
+        if (Auth::attempt([
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
+            'role' => $request->input('role')
+        ])) {
+            return redirect()->route('teacher');
         }
+        return redirect()->back();
     }
 }

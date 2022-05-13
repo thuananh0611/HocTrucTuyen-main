@@ -27,7 +27,7 @@
                 </div>
                 <select class="form-control selectric" id="role" name="role" required>
                     <option value="">--Chọn chức vụ--</option>
-                    <option value="1">Tổ trưởng bộ môn</option>
+                    <option value="Q005">Tổ trưởng bộ môn</option>
                     <option value="2">Giáo viên chủ nhiệm</option>
                 </select>
                 <button type="submit">Đăng nhập</button>

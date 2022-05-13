@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 // ADMIN
 
 use \App\Http\Controllers\api\admin\expense_ctAdController;
 // TEACHER
-use \App\Http\Controllers\api\LoginController;
 
+use \App\Http\Controllers\api\LoginController;
+use \App\Http\Controllers\api\teacher\MainController;
 // STUDENT
 
 
@@ -110,11 +112,9 @@ Route::get('/admin/profileAd', function () {
 
 Route::get('/teacher/login', function () {
     return view('teacher.index');
-});
+})->name('teacher');
 
-Route::get('/teacher/home', function () {
-    return view('teacher.index');
-});
+Route::get('/teacher/home', [MainController::class, 'index'])->name('teacher');
 
 Route::get('/teacher/account-setting', function () {
     return view('teacher.account-setting.index');
