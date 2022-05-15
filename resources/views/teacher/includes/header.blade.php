@@ -194,7 +194,7 @@
                 </div>
             </div>
         </li>
-        <li class="dropdown" ng-controller="LeaderCtrl" ng-init="LoadLg()">
+        <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" src="" class="user-img-radious-style" id="imgU"> <span class="d-sm-none d-lg-inline-block"></span>
             </a>
@@ -215,7 +215,7 @@
                     $("#imgU").attr("src", imgU);
                 </script>
             </div>
-            <script type="text/javascript" src="~/Areas/Leader/angularScript/leader.js"></script>
+            <!-- <script type="text/javascript" src="~/Areas/Leader/angularScript/leader.js"></script> -->
         </li>
     </ul>
 </nav>

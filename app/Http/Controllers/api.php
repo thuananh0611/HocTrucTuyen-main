@@ -20,7 +20,7 @@ use App\Http\Controllers\api\admin\expense_ctAdController;
 use App\Http\Controllers\api\admin\revenueAdController;
 use App\Http\Controllers\api\admin\revenue_ctAdController;
 // TEACHER
-
+use App\Http\Controllers\api\teacher\HomeTeController;
 
 // STUDENT
 use App\Http\Controllers\api\student\HomeStudentController;
@@ -75,7 +75,7 @@ Route::resource('revenue', revenueAdController::class);
 Route::resource('revenue-ct', revenue_ctAdController::class);
 
 // TEACHER
-
+Route::resource('home-teacher', HomeTeController::class);
 
 // STUDENT
 Route::resource('home-student', HomeStudentController::class);

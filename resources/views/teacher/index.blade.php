@@ -1,6 +1,10 @@
 @extends('/teacher._layout')
 @section('content')
 
+<header>
+    <title>Danh sách Tổ trưởng - 3CESCHOOL</title>
+    <script src="/teacher/js/teacherAgl/leader.js"></script>
+</header>
 <div class="main-content" ng-controller="LeaderCtrl">
     <section class="section">
         <div class="row ">
@@ -20,9 +24,7 @@
                             <table class="table table-hover table-bordered" id="tableExport" style="width:100%;">
                                 <thead>
                                     <tr style="text-align: center;">
-                                        <th>Mã trưởng tổ môn</th>
-                                        <th>Mã nhóm quyền</th>
-                                        <th>Mã tổ chuyên môn</th>
+                                        <th>STT</th>
                                         <th>Họ tên</th>
                                         <th>Ngày sinh</th>
                                         <th>Giới tính</th>
@@ -31,53 +33,51 @@
                                         <th>Số điện thoại</th>
                                         <th>Ảnh</th>
                                         <th>Chức vụ</th>
+                                        
                                         <th>Trạng thái</th>
-                                        <th>Bắt đầu làm việc</th>
-                                        <th>Kết thúc làm việc</th>
                                         <th>Hành động</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="item in listLead | filter : search">
-
-                                        <td style="text-align: center;">@{{item.ID_teacher}}</td>
-                                        <td style="text-align: center;">@{{item.ID_Permission}}</td>
-                                        <td style="text-align: center;">@{{item.ID_ProGroup}}</td>
-                                        <td>@{{item.Name_teacher}}</td>
-                                        <td style="text-align: center;">@{{item.Birth_teacher.replace('/Date(','').replace(')/','') | date:"dd/MM/yyyy"}}</td>
-                                        <td style="text-align: center;">@{{item.Gender_teacher}}</td>
-                                        <td>@{{item.Address_teacher}}</td>
-                                        <td>@{{item.Mail_teacher}}</td>
-                                        <td style="text-align: center;">@{{item.Phone_teacher}}</td>
-                                        <td style="text-align: center; padding: 10px;">
-                                            <img src="~/@{{item.Img_teacher}}" alt="avatar" style="height: 95px;" class="zoom">
-                                        </td>
-                                        <td style="text-align: center;">@{{item.Position_teacher}}</td>
-                                        <td style="text-align: center;">@{{item.Status_teacher}}</td>
-                                        <td style="text-align: center;">@{{item.Time_Start.replace('/Date(','').replace(')/','') | date:"dd/MM/yyyy"}}</td>
-                                        <td style="text-align: center;">@{{item.Time_End.replace('/Date(','').replace(')/','') | date:"dd/MM/yyyy"}}</td>
+                                    <tr ng-repeat="p in filtered = tes | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                                        <td>@{{$index+1}}</td>
+                                        <td>@{{p.Name_Teacher}}</td>
+                                        <td>@{{p.Birth_Teacher.replace('/Date(','').replace(')/','') | date:"dd/MM/yyyy"}}</td>
+                                        <td>@{{p.Gender_Teacher}}</td>
+                                        <td>@{{p.Address_Teacher}}</td>
+                                        <td>@{{p.Mail_Teacher}}</td>
+                                        <td>@{{p.Phone_Teacher}}</td>
+                                        <td><img src="/storage/users/@{{p.Img_Teacher}}" alt="Ảnh"></td>
+                                        <td>@{{p.Position_Teacher}}</td>
+                                        <td>@{{p.Status_Teacher}}</td>
                                         <td style="text-align: center;">
-                                            <button data-toggle="modal" data-target=".bd-example-modal-lg" title="Sửa" class="btn btn-icon btn-primary" ng-click="UpdateLead(item)">
+                                            <button data-toggle="modal" data-target=".bd-example-modal-lg" title="Sửa" class="btn btn-icon btn-primary" ng-click="showModal(p.id)">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <button title="Xóa" class="btn btn-icon btn-warning" ng-click="DeleteLead(item)">
+                                            <button title="Xóa" class="btn btn-icon btn-warning" ng-click="deleteClick(p.id)">
                                                 <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                            <button data-toggle="modal" data-target="#largeModalCT" title="Xem chi tiết" class="btn btn-icon btn-primary" ng-click="showModalCT(p.id)">
+                                                <i class="fas fa-info"></i>
                                             </button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+                            <!-- </div>
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <pagination ng-model="currentPage" total-items="total" max-size="maxSize" boundary-links="true">
                                 </pagination>
                             </div>
+                        </div> -->
+                            <center>
+                                <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit" boundary-links="true"></pagination>
+                            </center>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section class="section">
         <div class="row clearfix">
