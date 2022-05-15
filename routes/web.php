@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 // ADMIN
 
 use \App\Http\Controllers\api\admin\expense_ctAdController;
+use App\Http\Controllers\api\admin\AdminAuthController;
 // TEACHER
 
 use \App\Http\Controllers\api\LoginController;
@@ -36,9 +37,8 @@ Route::get('/LOGIN/home', function () {
 
 
 
-Route::get('/LOGIN/admin', function () {
-    return view('auth.admin.index');
-});
+Route::get('/LOGIN/admin', [AdminAuthController::class,'AdminLogin']);
+Route::post('/LOGIN/admin', [AdminAuthController::class, 'login-admin'])->name('login-admin');
 
 Route::get('/LOGIN/teacher', function () {
     return view('auth.teacher.index');
