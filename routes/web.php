@@ -109,72 +109,11 @@ Route::get('/admin/profileAd', function () {
 });
 
 // TEACHER
-
-Route::get('/teacher/login', function () {
+Route::get('/teacher/home', function () {
     return view('teacher.index');
-})->name('teacher');
-
-Route::get('/teacher/home', [MainController::class, 'index'])->name('teacher');
-
-Route::get('/teacher/account-setting', function () {
-    return view('teacher.account-setting.index');
 });
 
-Route::get('/teacher/account-setting', function () {
-    return view('teacher.account-setting.index');
-});
 
-Route::get('/teacher/classes', function () {
-    return view('teacher.classes.index');
-});
-
-Route::get('/teacher/unformal-classes', function () {
-    return view('teacher.unformal-classes.index');
-});
-
-Route::get('/teacher/courses', function () {
-    return view('teacher.courses.index');
-});
-
-Route::get('/teacher/enquiry', function () {
-    return view('teacher.enquiry.index');
-});
-
-Route::get('/teacher/events', function () {
-    return view('teacher.events.index');
-});
-
-Route::get('/teacher/import', function () {
-    return view('teacher.import.index');
-});
-
-Route::get('/teacher/export', function () {
-    return view('teacher.export.index');
-});
-
-Route::get('/teacher/admissions', function () {
-    return view('teacher.admissions.index');
-});
-
-Route::get('/teacher/exam-time-table', function () {
-    return view('teacher.exam-time-table.index');
-});
-
-Route::get('/teacher/seminars', function () {
-    return view('teacher.seminars.index');
-});
-
-Route::get('/teacher/students', function () {
-    return view('teacher.students.index');
-});
-
-Route::get('/teacher/users', function () {
-    return view('teacher.users.index');
-});
-
-Route::get('/teacher/website-setting', function () {
-    return view('teacher.website-setting.index');
-});
 
 // STUDENT
 Route::get('/student/home', function () {

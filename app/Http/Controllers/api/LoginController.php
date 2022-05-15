@@ -29,7 +29,7 @@ class LoginController extends Controller
             'password' => $request->input('password'),
             'role' => $request->input('role')
         ])) {
-            return redirect()->route('teacher');
+            return view('teacher.index');
         }
         Session::flash('error', 'Email hoặc Password không đúng!');
         return redirect()->back();

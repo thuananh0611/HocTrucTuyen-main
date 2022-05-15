@@ -1,42 +1,221 @@
-<div class="container-fluid sb1">
-    <div class="row">
-        <!--== LOGO ==-->
-        <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
-            <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
-            <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
-            <a href="index-2.html" class="logo">
-                <h1 style="margin-top: -6px;font-size: 33px;color: #ffffff;">3CESCHOOL</h1>
-            </a>
-        </div>
-        <!--== SEARCH ==-->
-        <div class="col-md-6 col-sm-6 mob-hide">
-            <form class="app-search">
-                <input type="text" placeholder="Tìm kiếm..." class="form-control" style="font-size: 20px;">
-                <a href="#"><i class="fa fa-search" style="font-size: 18px;"></i></a>
-            </form>
-        </div>
-        <!--== NOTIFICATION ==-->
-        <div class="col-md-2 tab-hide">
-            <div class="top-not-cen">
-                <a class='waves-effect btn-noti' href="#" title="all enquiry messages"><i class="fa fa-commenting-o" aria-hidden="true"></i><span>5</span></a>
-                <a class='waves-effect btn-noti' href="#" title="course booking messages"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>5</span></a>
-                <a class='waves-effect btn-noti' href="#" title="admission enquiry"><i class="fa fa-tag" aria-hidden="true"></i><span>5</span></a>
-            </div>
-        </div>
-        <!--== MY ACCCOUNT ==-->
-        <div class="col-md-2 col-sm-3 col-xs-6">
-            <!-- Dropdown Trigger -->
-            <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'><img src="images/user/6.png" alt="" />Tài khoản <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </a>
-
-            <!-- Dropdown Structure -->
-            <ul id='top-menu' class='dropdown-content top-menu-sty'>
-                <li><a href="/teacher/account-setting" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Thông tin tài khoản</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="#" class="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg main-navbar sticky">
+    <div class="form-inline mr-auto">
+        <ul class="navbar-nav mr-3">
+            <li>
+                <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+									collapse-btn"> <i data-feather="align-justify"></i></a>
+            </li>
+            <li>
+                <a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                    <i data-feather="maximize"></i>
+                </a>
+            </li>
+            <li>
+                <form class="form-inline mr-auto">
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search" data-width="200">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </li>
+        </ul>
     </div>
-</div>
+    <ul class="navbar-nav navbar-right">
+        <li class="dropdown dropdown-list-toggle">
+            <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">
+                <i data-feather="mail"></i>
+                <span class="badge headerBadge1">
+                    6
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                <div class="dropdown-header">
+                    Messages
+                    <div class="float-right">
+                        <a href="#">Mark All As Read</a>
+                    </div>
+                </div>
+                <div class="dropdown-list-content dropdown-list-message">
+                    <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar
+											text-white">
+                            <img alt="image" src="/teacher/img/users/user-1.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                John
+                                Deo
+                            </span>
+                            <span class="time messege-text">Please check your mail !!</span>
+                            <span class="time">2 Min Ago</span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar text-white">
+                            <img alt="image" src="/teacher/img/users/user-2.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                Sarah
+                                Smith
+                            </span> <span class="time messege-text">
+                                Request for leave
+                                application
+                            </span>
+                            <span class="time">5 Min Ago</span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar text-white">
+                            <img alt="image" src="/teacher/img/users/user-5.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                Jacob
+                                Ryan
+                            </span> <span class="time messege-text">
+                                Your payment invoice is
+                                generated.
+                            </span> <span class="time">12 Min Ago</span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar text-white">
+                            <img alt="image" src="/teacher/img/users/user-4.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                Lina
+                                Smith
+                            </span> <span class="time messege-text">
+                                hii John, I have upload
+                                doc
+                                related to task.
+                            </span> <span class="time">
+                                30
+                                Min Ago
+                            </span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar text-white">
+                            <img alt="image" src="/teacher/img/users/user-3.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                Jalpa
+                                Joshi
+                            </span> <span class="time messege-text">
+                                Please do as specify.
+                                Let me
+                                know if you have any query.
+                            </span> <span class="time">
+                                1
+                                Days Ago
+                            </span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-avatar text-white">
+                            <img alt="image" src="/teacher/img/users/user-2.png" class="rounded-circle">
+                        </span> <span class="dropdown-item-desc">
+                            <span class="message-user">
+                                Sarah
+                                Smith
+                            </span> <span class="time messege-text">Client Requirements</span>
+                            <span class="time">2 Days Ago</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="dropdown-footer text-center">
+                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown dropdown-list-toggle">
+            <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">
+                <i data-feather="bell" class="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                <div class="dropdown-header">
+                    Notifications
+                    <div class="float-right">
+                        <a href="#">Mark All As Read</a>
+                    </div>
+                </div>
+                <div class="dropdown-list-content dropdown-list-icons">
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <span class="dropdown-item-icon bg-primary text-white">
+                            <i class="fas
+												fa-code"></i>
+                        </span> <span class="dropdown-item-desc">
+                            Template update is
+                            available now! <span class="time">
+                                2 Min
+                                Ago
+                            </span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-icon bg-info text-white">
+                            <i class="far
+												fa-user"></i>
+                        </span> <span class="dropdown-item-desc">
+                            <b>You</b> and <b>
+                                Dedik
+                                Sugiharto
+                            </b> are now friends <span class="time">
+                                10 Hours
+                                Ago
+                            </span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-icon bg-success text-white">
+                            <i class="fas
+												fa-check"></i>
+                        </span> <span class="dropdown-item-desc">
+                            <b>Kusnaedi</b> has
+                            moved task <b>Fix bug header</b> to <b>Done</b> <span class="time">
+                                12
+                                Hours
+                                Ago
+                            </span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-icon bg-danger text-white">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span> <span class="dropdown-item-desc">
+                            Low disk space. Let's
+                            clean it! <span class="time">17 Hours Ago</span>
+                        </span>
+                    </a> <a href="#" class="dropdown-item">
+                        <span class="dropdown-item-icon bg-info text-white">
+                            <i class="fas
+												fa-bell"></i>
+                        </span> <span class="dropdown-item-desc">
+                            Welcome to Otika
+                            template! <span class="time">Yesterday</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="dropdown-footer text-center">
+                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown" ng-controller="LeaderCtrl" ng-init="LoadLg()">
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                <img alt="image" src="" class="user-img-radious-style" id="imgU"> <span class="d-sm-none d-lg-inline-block"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right pullDown">
+                <div class="dropdown-title">Xin chào<br><span id="nameU"></span></div>
+                <a href="~/Leader/Leader/PersonalInforLead" class="dropdown-item has-icon">
+                    <i class="far fa-user"></i> Hồ sơ
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="/Login/Login/LogOut" class="dropdown-item has-icon text-danger">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Đăng xuất
+                </a>
+                <script>
+                    var nameU = localStorage.getItem("nameU");
+                    var imgU = localStorage.getItem("imgU");
+                    $("#nameU").text(nameU);
+                    $("#imgU").attr("src", imgU);
+                </script>
+            </div>
+            <script type="text/javascript" src="~/Areas/Leader/angularScript/leader.js"></script>
+        </li>
+    </ul>
+</nav>

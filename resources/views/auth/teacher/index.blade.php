@@ -15,19 +15,19 @@
     <div id="particles-js">
         <form method="post" action="/LOGIN/teacher/store">
             @if (Auth::check())
-                <div>
-                Bạn đang đăng nhập với quyền 
+            <div>
+                Bạn đang đăng nhập với quyền
                 @if( Auth::user()->role == 'Q005')
-                    {{ "Tổ trưởng bộ môn" }}
+                {{ "Tổ trưởng bộ môn" }}
                 <!-- @elseif( Auth::user()->level == 2)
                     {{ "Admin" }}
                 @elseif( Auth::user()->level == 3)
                     {{ "Thành viên" }} -->
                 @endif
-                </div>
-                <div class="pull-right" style="margin-top: 3px;"><a class="btn btn-primary" href="/{{ url('/logout') }}">Đăng xuất</a></div>
+            </div>
+            <div class="pull-right" style="margin-top: 3px;"><a class="btn btn-primary" href="/{{ url('/logout') }}">Đăng xuất</a></div>
             @endif
-            @include('auth.alerts')
+
             <div class="form-box">
                 <div class="header-text">
                     Đăng nhập
@@ -42,6 +42,7 @@
                     <option value="Q005">Tổ trưởng bộ môn</option>
                     <option value="2">Giáo viên chủ nhiệm</option>
                 </select>
+                @include('auth.alerts')
                 <button type="submit">Đăng nhập</button>
                 @csrf
                 <center>
