@@ -13,23 +13,27 @@
 
 <body>
     <div id="particles-js">
-        <div class="form-box">
-            <div class="header-text">
-                Đăng nhập
+        <form action="{{route('login-admin}}" method="post">
+            @csrf
+            <div class="form-box">
+                <div class="header-text">
+                    Đăng nhập
+                </div>
+                <input placeholder="Nhập tài khoản..." type="text" required>
+                <div class="container">
+                    <input type="password" id="pw" placeholder="Nhập mật khẩu..." required>
+                    <span class="show-btn"><i class="fas fa-eye"></i></span>
+                </div>
+                <button>Đăng nhập</button>
+                <center>
+                    <span style="font-style: italic;">Bạn là giáo viên? <a href="/LOGIN/teacher">Bấm vào đây</a> để đăng
+                        nhập giáo viên.</span>
+                    <br><br>
+                    <span style="font-style: italic;"><a href="/LOGIN/forgotpassword">Quên mật khẩu?</a></span>
+                </center>
             </div>
-            <input placeholder="Nhập tài khoản..." type="text" required>
-            <div class="container">
-                <input type="password" id="pw" placeholder="Nhập mật khẩu..." required>
-                <span class="show-btn"><i class="fas fa-eye"></i></span>
-            </div>
-            <button>Đăng nhập</button>
-            <center>
-                <span style="font-style: italic;">Bạn là giáo viên? <a href="/LOGIN/teacher">Bấm vào đây</a> để đăng
-                    nhập giáo viên.</span>
-                <br><br>
-                <span style="font-style: italic;"><a href="/LOGIN/forgotpassword">Quên mật khẩu?</a></span>
-            </center>
-        </div>
+        </form>
+
     </div>
 
     <script src="/login/js/particles.js"></script>
